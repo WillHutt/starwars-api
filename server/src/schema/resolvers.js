@@ -1,4 +1,4 @@
-const nameFormatter = require('./utils/name');
+const nameFormatter = require('../utils/name');
 
 const resolvers = {
     Person: {

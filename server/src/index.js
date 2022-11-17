@@ -1,6 +1,6 @@
 const { ApolloServer } = require('apollo-server');
-const typeDefs = require('./schema');
-const resolvers = require('./resolvers');
+const typeDefs = require('./schema/typedefs');
+const resolvers = require('./schema/resolvers');
 const StarwarsAPI = require('./rest-api-sources/starwars-rest-api');
 
 const server = new ApolloServer({
