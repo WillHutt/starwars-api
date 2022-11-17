@@ -1,5 +1,5 @@
 const nameFormatter = (name) => {
-    const [first, last] = name.includes(",") ? name.split(", ") : name.split(" ")
+    const [first, last] = name.split(" ")
 
     if (last === undefined) {
         return first

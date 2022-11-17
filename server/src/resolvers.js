@@ -1,4 +1,4 @@
-// const nameFormatter = require('./utils/name');
+const nameFormatter = require('./utils/name');
 
 const resolvers = {
     Person: {
@@ -6,6 +6,12 @@ const resolvers = {
             const homeworldId = new URL(id?.homeworld).pathname.replace('/api/planets/', '')
           return await starwarsAPI.getHomeworld(homeworldId);
         },
+        name: ({ name }) => {
+          if(!name) {
+            return null;
+          }
+          return nameFormatter(name)
+        }
       },
     Query: {
         person: async (_, {id}, {starwarsAPI}) => {
