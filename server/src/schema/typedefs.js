@@ -5,14 +5,8 @@ type Query {
   person(id: ID, personID: ID): Person
 }
 
-"""An object with an ID"""
-interface Node {
-  """The id of the object."""
-  id: ID!
-}
-
 """An individual person or character within the Star Wars universe."""
-type Person implements Node {
+type Person {
   """The name of this person."""
   name: String
 
@@ -58,16 +52,13 @@ type Person implements Node {
 
   """The ISO 8601 date format of the time that this resource was edited."""
   edited: String
-
-  """The ID of an object"""
-  id: ID!
 }
 
 """
 A large mass, planet or planetoid in the Star Wars Universe, at the time of
 0 ABY.
 """
-type Planet implements Node {
+type Planet {
   """The name of this planet."""
   name: String
 
@@ -112,9 +103,6 @@ type Planet implements Node {
 
   """The ISO 8601 date format of the time that this resource was edited."""
   edited: String
-
-  """The ID of an object"""
-  id: ID!
 }
 
 `;
